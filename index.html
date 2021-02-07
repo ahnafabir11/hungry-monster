@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hungry Monster</title>
+
+  <!-- font awesome CDN -->
+  <script src="https://kit.fontawesome.com/9cc8fb7cc6.js" crossorigin="anonymous"></script>
+  <!-- bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <!-- local css -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <div class="container my-3">
+      <a class="navbar-brand" id="custom-logo" href="#">Hungry Monster</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto" id="nav-all-list">
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Recipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="#">Blog</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Search Box -->
+    <div id="search-box">
+      <i class="fas fa-search"></i>
+      <input type="text" placeholder="Search for meal...." id="search-input">
+      <button onclick="searchMeal()">Search</button>
+    </div>
+
+    <!-- pop up for meal details -->
+    <div id="meal-details" onclick="closeDetails()">
+      <img src="https://www.themealdb.com/images/media/meals/tyywsw1505930373.jpg/preview" id="details-thumbnail"/>
+      <div class="py-4 px-3">
+        <h4 id="details-mealName">Meal Name</h4>
+        <div id="details-ingredient"></div>
+      </div>
+      <p class="text-center text-warning"><b>Note:</b> Click on this section to close</p>
+    </div>
+
+    <!-- meal's list -->
+    <section class="py-5" id="meal-container"></section>
+  </main>
+
+  <!-- bootstrap js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+  <!-- local js -->
+  <script src="app.js"></script>
+</body>
+
+</html>
