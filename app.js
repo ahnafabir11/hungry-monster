@@ -61,7 +61,7 @@ const mealDetails = () => {
 
         if (ingredient !== '') {
           let items = document.createElement('p'); 
-          items.innerHTML = `<i class="fas fa-check-square"></i> ${measure} ${ingredient}`
+          items.innerHTML = `<i class="fas fa-check-square"></i> ${measure} - ${ingredient}`;
           ul.appendChild(items);
         }
       }
